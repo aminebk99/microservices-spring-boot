@@ -1,7 +1,9 @@
-FROM eclipse-temurin:17-jdk-alpine as builder
 
 # Set up build environment
 WORKDIR /app
+
+# Make build script executable
+RUN chmod +x build_services.sh
 
 # Resolve dependencies and build application
 RUN ./build_services.sh
