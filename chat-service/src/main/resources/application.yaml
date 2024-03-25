@@ -1,0 +1,22 @@
+spring:
+  security:
+    user:
+      name: amine
+      password: amine
+  application:
+    name: chat-service
+  datasource:
+    url: jdbc:postgresql://postgres:5432/chat-db
+    username: postgres
+    password: 123
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8086
