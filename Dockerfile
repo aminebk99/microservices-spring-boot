@@ -1,7 +1,3 @@
-
-# Set up build environment
-WORKDIR /app
-
 # Make build script executable
 RUN chmod +x build_services.sh
 
