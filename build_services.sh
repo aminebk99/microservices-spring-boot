@@ -16,6 +16,4 @@ echo "Building user-service..."
 echo "Building post-service..."
 (cd ./post-service && mvn clean package -DskipTests)
 
-# Start Docker containers
-echo "Starting Docker containers..."
-docker-compose up
+
