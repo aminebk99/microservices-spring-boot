@@ -1,3 +1,18 @@
+# Build stage
+FROM maven:3.8.3-openjdk-17 AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy Maven dependencies file
+COPY pom.xml .
+
+# Resolve dependencies
+RUN mvn dependency:go-offline
+
+# Copy the rest of the application source code
+COPY . .
+
 # Make build script executable
 RUN chmod +x build_services.sh
 
