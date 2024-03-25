@@ -18,4 +18,4 @@ echo "Building post-service..."
 
 # Start Docker containers
 echo "Starting Docker containers..."
-docker-compose up -d --build
+docker-compose up
