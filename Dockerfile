@@ -1,14 +1,14 @@
 # Build stage
-FROM maven:3.8.3-openjdk-17 AS builder
+FROM maven:3.8.5-openjdk-17 AS builder
 
 # Set working directory
 WORKDIR /app
 
 # Copy Maven dependencies file
-COPY pom.xml .
+COPY . .
 
 # Resolve dependencies
-RUN mvn dependency:go-offline
+RUN mvn clean package -DskipTests
 
 # Copy the rest of the application source code
 COPY . .
